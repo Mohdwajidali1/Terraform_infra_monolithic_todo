@@ -1,4 +1,4 @@
-name: "Dev Terraform Workflow"
+name: "Dev Terraform Workflow new"
 
 on:
   pull_request:
@@ -76,6 +76,7 @@ jobs:
          working-directory: ./environment/dev   
 
           
+
 
 
 
