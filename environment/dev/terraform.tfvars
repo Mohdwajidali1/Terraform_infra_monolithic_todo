@@ -97,14 +97,14 @@ key_vaults = {
     rg_name   = "rg-dev11"
     tenant_id = "cf352d1c-888a-402f-869f-9cad4c361979"
     sku_name  = "standard"
-          access_policies = [
-        {
-          tenant_id          = "cf352d1c-888a-402f-869f-9cad4c361979"
-          object_id          = "40fadabc-aa3b-4043-a0a0-4a454d3b45b7"
-          key_permissions    = ["Get", "List"]
-          secret_permissions = ["Get", "Set", "List"]
-        }
-      ]
+    access_policies = [
+      {
+        tenant_id          = "cf352d1c-888a-402f-869f-9cad4c361979"
+        object_id          = "40fadabc-aa3b-4043-a0a0-4a454d3b45b7"
+        key_permissions    = ["Get", "List"]
+        secret_permissions = ["Get", "Set", "List"]
+      }
+    ]
     tags = {
       Environment = "dev"
       ManagedBy   = "Terraform"
@@ -123,13 +123,13 @@ kubernetes_clusters = {
     sku_tier            = "Free"
 
     default_node_pool = {
-      name                = "systempool"
-      vm_size             = "Standard_B2s"
-      node_count          = 1
-      os_disk_size_gb     = 30
-      enable_auto_scaling = false
-      min_count           = 1
-      max_count           = 1
+      name                 = "systempool"
+      vm_size              = "Standard_B2s"
+      node_count           = 1
+      os_disk_size_gb      = 30
+      auto_scaling_enabled = false
+      min_count            = null
+      max_count            = null
     }
 
     identity_type = "SystemAssigned"
@@ -154,7 +154,7 @@ kubernetes_clusters = {
     }
   }
 
-  
+
 }
 
 acr = {
@@ -166,12 +166,12 @@ acr = {
       {
         location                = "West Europe"
         zone_redundancy_enabled = true
-      tags = {
-      Environment = "dev"
-      ManagedBy   = "Terraform"
-    }
+        tags = {
+          Environment = "dev"
+          ManagedBy   = "Terraform"
+        }
       }
-     
+
     ]
   }
 }
@@ -187,7 +187,7 @@ sql_servers = {
       login_username = "Mdwajid@devopsbs089gmail.onmicrosoft.com"
       object_id      = "40fadabc-aa3b-4043-a0a0-4a454d3b45b7"
     }
-   tags = {
+    tags = {
       Environment = "dev"
       ManagedBy   = "Terraform"
     }
@@ -196,6 +196,6 @@ sql_servers = {
 
 
 
-  
+
 
 
