@@ -100,43 +100,23 @@ variable "key_vaults" {
 }
 
 variable "kubernetes_clusters" {
-  description = "Map of AKS cluster configurations"
   type = map(object({
     name                = string
     location            = string
     resource_group_name = string
     dns_prefix          = string
-    # kubernetes_version  = string
-    sku_tier            = string
-
     default_node_pool = object({
-      name                = string
-      vm_size             = string
-      node_count          = number
-      os_disk_size_gb     = number
-       min_count           = number
-      max_count           = number
+      name                 = string
+      vm_size              = string
+      node_count           = number
+  
     })
-
-    identity_type = string
-
-    network_profile = object({
-      network_plugin     = string
-      network_policy     = string
-      dns_service_ip     = string
-      service_cidr       = string
-     
-    })
-
-    azure_policy_enabled             = bool
-    private_cluster_enabled          = bool
-    oidc_issuer_enabled              = bool
-    open_service_mesh_enabled        = bool
-    http_application_routing_enabled = bool
-
-    tags = map(string)
+    tags = optional(map(string))
   }))
+  
 }
+
+
 
 
 

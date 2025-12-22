@@ -115,46 +115,15 @@ key_vaults = {
 
 kubernetes_clusters = {
   dev = {
-    name                = "aks-dev11"
+    name                = "aks-tododev-011"
     location            = "Central India"
     resource_group_name = "rg-dev11"
-    dns_prefix          = "aksdev"
-    # kubernetes_version  = "1.29.0"
-    sku_tier            = "Free"
-
-    default_node_pool = {
-      name                 = "systempool"
-      vm_size              = "standard_b2s_v2"
-      node_count           = 1
-      os_disk_size_gb      = 30
-      auto_scaling_enabled = false
-      min_count            = null
-      max_count            = null
-    }
-
-    identity_type = "SystemAssigned"
-
-    network_profile = {
-      network_plugin     = "azure"
-      network_policy     = "azure"
-      dns_service_ip     = "10.0.0.10"
-      service_cidr       = "10.0.0.0/16"
-      docker_bridge_cidr = "172.17.0.1/16"
-    }
-
-    azure_policy_enabled             = true
-    private_cluster_enabled          = false
-    oidc_issuer_enabled              = true
-    open_service_mesh_enabled        = false
-    http_application_routing_enabled = false
-
+    dns_prefix          = "aksdev011"
     tags = {
       Environment = "dev"
       ManagedBy   = "Terraform"
     }
   }
-
-
 }
 
 acr = {
