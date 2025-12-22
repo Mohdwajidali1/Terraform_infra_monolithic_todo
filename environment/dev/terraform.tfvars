@@ -1,6 +1,6 @@
 rgs = {
   rg1 = {
-    name       = "rg-dev"
+    name       = "rg-dev11"
     location   = "centralindia"
     managed_by = "terraform"
     tags = {
@@ -29,9 +29,9 @@ rgs = {
 
 stgs = {
   storage01 = {
-    name                       = "devstorage01"
+    name                       = "devstorage011"
     location                   = "Central India"
-    resource_group_name        = "rg-dev"
+    resource_group_name        = "rg-dev11"
     account_tier               = "Standard"
     account_kind               = "StorageV2"
     account_replication_type   = "LRS"
@@ -45,24 +45,24 @@ stgs = {
     }
   }
 
-  storage02 = {
-    name                     = "devstorage02"
-    location                 = "Central India"
-    resource_group_name      = "rg-dev"
-    account_tier             = "Premium"
-    account_replication_type = "ZRS"
-    access_tier              = "Hot"
-    tags = {
-      Environment = "dev"
-      Owner       = "InfraTeam"
-    }
-  }
+  # storage02 = {
+  #   name                     = "devstorage02"
+  #   location                 = "Central India"
+  #   resource_group_name      = "rg-dev"
+  #   account_tier             = "Premium"
+  #   account_replication_type = "ZRS"
+  #   access_tier              = "Hot"
+  #   tags = {
+  #     Environment = "dev"
+  #     Owner       = "InfraTeam"
+  #   }
+  # }
 }
 
 public_ips = {
   pip1 = {
-    name                    = "dev-public-ip-01"
-    resource_group_name     = "rg-dev"
+    name                    = "dev-public-ip-011"
+    resource_group_name     = "rg-dev11"
     location                = "Central India"
     allocation_method       = "Static"
     sku                     = "Standard"
@@ -92,15 +92,15 @@ public_ips = {
 
 key_vaults = {
   kv1 = {
-    kv_name   = "kv-demo-dev01"
+    kv_name   = "kv-demo-dev011"
     location  = "Central India"
-    rg_name   = "rg-dev"
-    tenant_id = "41f65365-4083-4b66-9451-eb3d952f7482"
+    rg_name   = "rg-dev11"
+    tenant_id = "cf352d1c-888a-402f-869f-9cad4c361979"
     sku_name  = "standard"
           access_policies = [
         {
-          tenant_id          = "41f65365-4083-4b66-9451-eb3d952f7482"
-          object_id          = "08f89125-8f27-4c8a-b268-972a8f6e7bfe"
+          tenant_id          = "cf352d1c-888a-402f-869f-9cad4c361979"
+          object_id          = "40fadabc-aa3b-4043-a0a0-4a454d3b45b7"
           key_permissions    = ["Get", "List"]
           secret_permissions = ["Get", "Set", "List"]
         }
@@ -115,9 +115,9 @@ key_vaults = {
 
 kubernetes_clusters = {
   dev = {
-    name                = "aks-dev"
+    name                = "aks-dev11"
     location            = "Central India"
-    resource_group_name = "rg-dev"
+    resource_group_name = "rg-dev11"
     dns_prefix          = "aksdev"
     kubernetes_version  = "1.29.0"
     sku_tier            = "Free"
@@ -159,8 +159,8 @@ kubernetes_clusters = {
 
 acr = {
   acr1 = {
-    acr_name            = "myacr001"
-    resource_group_name = "rg-dev"
+    acr_name            = "myacr0011"
+    resource_group_name = "rg-dev11"
     location            = "Central India"
     georeplications = [
       {
@@ -178,14 +178,14 @@ acr = {
 
 sql_servers = {
   sql1 = {
-    name                         = "my-sqlserver-dev"
-    resource_group_name          = "rg-dev"
+    name                         = "my-sqlserver-dev11"
+    resource_group_name          = "rg-dev11"
     location                     = "Central India"
     administrator_login          = "sqladmin"
     administrator_login_password = "P@ssword123!"
     azuread_administrator = {
       login_username = "wajidali@ashishranjan1077gmail.onmicrosoft.com"
-      object_id      = "08f89125-8f27-4c8a-b268-972a8f6e7bfe"
+      object_id      = "40fadabc-aa3b-4043-a0a0-4a454d3b45b7"
     }
    tags = {
       Environment = "dev"
