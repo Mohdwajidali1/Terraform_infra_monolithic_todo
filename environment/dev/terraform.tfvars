@@ -92,7 +92,7 @@ public_ips = {
 
 key_vaults = {
   kv1 = {
-    kv_name   = "kv-demo-dev011"
+    kv_name   = "kv-demo-dev012"
     location  = "Central India"
     rg_name   = "rg-dev11"
     tenant_id = "cf352d1c-888a-402f-869f-9cad4c361979"
@@ -184,7 +184,7 @@ sql_servers = {
     administrator_login          = "sqladmin"
     administrator_login_password = "P@ssword123!"
     azuread_administrator = {
-      login_username = "wajidali@ashishranjan1077gmail.onmicrosoft.com"
+      login_username = "Mdwajid@devopsbs089gmail.onmicrosoft.com"
       object_id      = "40fadabc-aa3b-4043-a0a0-4a454d3b45b7"
     }
    tags = {
