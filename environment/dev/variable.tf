@@ -106,7 +106,7 @@ variable "kubernetes_clusters" {
     location            = string
     resource_group_name = string
     dns_prefix          = string
-    kubernetes_version  = string
+    # kubernetes_version  = string
     sku_tier            = string
 
     default_node_pool = object({

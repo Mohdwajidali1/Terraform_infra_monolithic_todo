@@ -119,12 +119,12 @@ kubernetes_clusters = {
     location            = "Central India"
     resource_group_name = "rg-dev11"
     dns_prefix          = "aksdev"
-    kubernetes_version  = "1.29.0"
+    # kubernetes_version  = "1.29.0"
     sku_tier            = "Free"
 
     default_node_pool = {
       name                 = "systempool"
-      vm_size              = "Standard_B2s"
+      vm_size              = "standard_b2s_v2"
       node_count           = 1
       os_disk_size_gb      = 30
       auto_scaling_enabled = false
