@@ -127,9 +127,9 @@ kubernetes_clusters = {
       vm_size             = "Standard_B2s"
       node_count          = 1
       os_disk_size_gb     = 30
-      enable_auto_scaling = true
+      enable_auto_scaling = false
       min_count           = 1
-      max_count           = 2
+      max_count           = 1
     }
 
     identity_type = "SystemAssigned"
