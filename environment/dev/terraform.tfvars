@@ -45,54 +45,26 @@ stgs = {
     }
   }
 
-  # storage02 = {
-  #   name                     = "devstorage02"
-  #   location                 = "Central India"
-  #   resource_group_name      = "rg-dev"
-  #   account_tier             = "Premium"
-  #   account_replication_type = "ZRS"
-  #   access_tier              = "Hot"
-  #   tags = {
-  #     Environment = "dev"
-  #     Owner       = "InfraTeam"
-  #   }
-  # }
 }
 
 public_ips = {
-  pip1 = {
-    name                    = "dev-public-ip-011"
+  ips1 = {
+    name                    = "dev-public-ip-14"
     resource_group_name     = "rg-dev11"
     location                = "Central India"
     allocation_method       = "Static"
-    sku                     = "Standard"
-    sku_tier                = "Regional"
-    ip_version              = "IPv4"
-    idle_timeout_in_minutes = 10
     tags = {
       Environment = "dev"
       Owner       = "devOpsTeam"
     }
   }
-
-  # pip2 = {
-  #   name                = "dev-public-ip-02"
-  #   resource_group_name = "rg-dev"
-  #   location            = "Central India"
-  #   allocation_method   = "Static"
-  #   sku                 = "Standard"
-  #   sku_tier            = "Global"
-  #   domain_name_label   = "devweb01"
-  #   tags = {
-  #     Environment = "dev"
-  #     Owner       = "InfraTeam"
-  #   }
-  # }
 }
+
+
 
 key_vaults = {
   kv1 = {
-    kv_name   = "kv-demo-dev012"
+    kv_name   = "kv-demo-dev141"
     location  = "Central India"
     rg_name   = "rg-dev11"
     tenant_id = "cf352d1c-888a-402f-869f-9cad4c361979"
@@ -115,7 +87,7 @@ key_vaults = {
 
 kubernetes_clusters = {
   dev = {
-    name                = "aks-tododev-011"
+    name                = "aks-tododev-012"
     location            = "Central India"
     resource_group_name = "rg-dev11"
     dns_prefix          = "aksdev011"
