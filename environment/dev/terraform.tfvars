@@ -64,7 +64,7 @@ public_ips = {
 
 key_vaults = {
   kv1 = {
-    kv_name   = "kv-demo-dev1141"
+    kv_name   = "kv-demo-dev1541"
     location  = "Central India"
     rg_name   = "rg-dev11"
     tenant_id = "cf352d1c-888a-402f-869f-9cad4c361979"
