@@ -23,6 +23,7 @@ module "azurerm_public_ip" {
   
 }
 
+
 module "azurerm_key_vault" {
   depends_on = [ module.azurerm_resource_group ]
   source = "../../module/azurerm_key_vault"
